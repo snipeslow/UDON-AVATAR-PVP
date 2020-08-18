@@ -1,0 +1,1980 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
+  m_Name: SetPlayerClassUDON
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 89f8f83ee3dacb141a4311a6f5926269,
+    type: 2}
+  udonAssembly: ".data_start\n\n    .export MaxHealth\n    .export ChestDMG\n    .export
+    HeadDMG\n    .export DOTAmount\n    .export HOTAmount\n    .export HealAmount\n
+    \   .export JumpSpeed\n    .export RunSpeed\n    .export WalkSpeed\n    .export
+    AllowJump\n    .export MinimumSize\n    .export ClassText\n    .export hitboxManager\n\n
+    \   __refl_const_intnl_udonTypeID: %SystemInt64, null\n    __refl_const_intnl_udonTypeName:
+    %SystemString, null\n    AllowJump: %SystemBoolean, null\n    MaxHealth: %SystemInt32,
+    null\n    ChestDMG: %SystemSingle, null\n    DOTAmount: %SystemSingle, null\n
+    \   HeadDMG: %SystemSingle, null\n    HealAmount: %SystemSingle, null\n    HOTAmount:
+    %SystemSingle, null\n    JumpSpeed: %SystemSingle, null\n    MinimumSize: %SystemSingle,
+    null\n    RunSpeed: %SystemSingle, null\n    WalkSpeed: %SystemSingle, null\n
+    \   ClassText: %SystemString, null\n    hitboxManager: %VRCUdonUdonBehaviour,
+    null\n    __0_const_intnl_SystemInt32: %SystemInt32, null\n    __0_const_intnl_SystemString:
+    %SystemString, null\n    __1_const_intnl_SystemString: %SystemString, null\n    __2_const_intnl_SystemString:
+    %SystemString, null\n    __3_const_intnl_SystemString: %SystemString, null\n    __4_const_intnl_SystemString:
+    %SystemString, null\n    __5_const_intnl_SystemString: %SystemString, null\n    __6_const_intnl_SystemString:
+    %SystemString, null\n    __7_const_intnl_SystemString: %SystemString, null\n    __0_const_intnl_SystemUInt32:
+    %SystemUInt32, null\n    __0_intnl_SystemBoolean: %SystemBoolean, null\n    __0_intnl_SystemSingle:
+    %SystemSingle, null\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\n
+    \   __0_intnl_VRCSDKBaseVRCPlayerApi: %VRCSDKBaseVRCPlayerApi, null\n    __1_intnl_VRCSDKBaseVRCPlayerApi:
+    %VRCSDKBaseVRCPlayerApi, null\n\n.data_end\n\n        \n         # using System.Collections.Generic;\n
+    \       \n         # using UdonSharp;\n        \n         # using UnityEngine;\n
+    \       \n         # using VRC.SDKBase;\n        \n         # using VRC.Udon;\n
+    \       \n         # public class SetPlayerClass : UdonSharpBehaviour\n.code_start\n
+    \       \n         # public int MaxHealth = 300;\n        \n         # public
+    float ChestDMG = 25;\n        \n         # public float HeadDMG = 300;\n        \n
+    \        # public float DOTAmount = 50;\n        \n         # public float HOTAmount
+    = 40;\n        \n         # public float HealAmount = 75;\n        \n         #
+    public float JumpSpeed = 5;\n        \n         # public float RunSpeed = 5;\n
+    \       \n         # public float WalkSpeed = 3;\n        \n         # public
+    bool AllowJump = true;\n        \n         # public float MinimumSize = 1f;\n
+    \       \n         # public string ClassText = \"Assault\";\n        \n         #
+    public HitboxManager hitboxManager;\n        \n         # public override void
+    Interact()\n    .export _interact\n        \n    _interact:\n        \n        PUSH,
+    __0_const_intnl_SystemUInt32\n        \n         # {\n        \n         # if(hitboxManager)\n
+    \       PUSH, hitboxManager\n        PUSH, __0_intnl_SystemBoolean\n        EXTERN,
+    \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\n        PUSH,
+    __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000200\n        \n         #
+    {\n        \n         # hitboxManager.ChestDMG = ChestDMG;\n        PUSH, hitboxManager\n
+    \       PUSH, __0_const_intnl_SystemString\n        PUSH, ChestDMG\n        EXTERN,
+    \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\n
+    \       \n         # hitboxManager.HeadDMG = HeadDMG;\n        PUSH, hitboxManager\n
+    \       PUSH, __1_const_intnl_SystemString\n        PUSH, HeadDMG\n        EXTERN,
+    \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\n
+    \       \n         # hitboxManager.HealAmount = HealAmount;\n        PUSH, hitboxManager\n
+    \       PUSH, __2_const_intnl_SystemString\n        PUSH, HealAmount\n        EXTERN,
+    \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\n
+    \       \n         # hitboxManager.MaxHealth = MaxHealth;\n        PUSH, hitboxManager\n
+    \       PUSH, __3_const_intnl_SystemString\n        PUSH, MaxHealth\n        EXTERN,
+    \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\n
+    \       \n         # hitboxManager.DOTAmount = DOTAmount;\n        PUSH, hitboxManager\n
+    \       PUSH, __4_const_intnl_SystemString\n        PUSH, DOTAmount\n        EXTERN,
+    \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\n
+    \       \n         # hitboxManager.HOTAmount = HOTAmount;\n        PUSH, hitboxManager\n
+    \       PUSH, __5_const_intnl_SystemString\n        PUSH, HOTAmount\n        EXTERN,
+    \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\n
+    \       \n         # hitboxManager.ClassText = ClassText;\n        PUSH, hitboxManager\n
+    \       PUSH, __6_const_intnl_SystemString\n        PUSH, ClassText\n        EXTERN,
+    \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\n
+    \       \n         # if (AllowJump)\n        PUSH, AllowJump\n        JUMP_IF_FALSE,
+    0x00000150\n        \n         # {\n        \n         # Networking.LocalPlayer.SetJumpImpulse(JumpSpeed);\n
+    \       PUSH, __0_intnl_VRCSDKBaseVRCPlayerApi\n        EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\n
+    \       PUSH, __0_intnl_VRCSDKBaseVRCPlayerApi\n        PUSH, JumpSpeed\n        EXTERN,
+    \"VRCSDKBaseVRCPlayerApi.__SetJumpImpulse__SystemSingle__SystemVoid\"\n        JUMP,
+    0x00000190\n        \n         # else\n        \n         # {\n        \n         #
+    Networking.LocalPlayer.SetJumpImpulse(0);\n        PUSH, __0_intnl_VRCSDKBaseVRCPlayerApi\n
+    \       EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\n
+    \       PUSH, __0_const_intnl_SystemInt32\n        PUSH, __0_intnl_SystemSingle\n
+    \       EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\n        PUSH,
+    __0_intnl_VRCSDKBaseVRCPlayerApi\n        PUSH, __0_intnl_SystemSingle\n        EXTERN,
+    \"VRCSDKBaseVRCPlayerApi.__SetJumpImpulse__SystemSingle__SystemVoid\"\n        \n
+    \        # Networking.LocalPlayer.SetRunSpeed(RunSpeed);\n        PUSH, __0_intnl_VRCSDKBaseVRCPlayerApi\n
+    \       EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\n
+    \       PUSH, __0_intnl_VRCSDKBaseVRCPlayerApi\n        PUSH, RunSpeed\n        EXTERN,
+    \"VRCSDKBaseVRCPlayerApi.__SetRunSpeed__SystemSingle__SystemVoid\"\n        \n
+    \        # Networking.LocalPlayer.SetWalkSpeed(WalkSpeed);\n        PUSH, __1_intnl_VRCSDKBaseVRCPlayerApi\n
+    \       EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\n
+    \       PUSH, __1_intnl_VRCSDKBaseVRCPlayerApi\n        PUSH, WalkSpeed\n        EXTERN,
+    \"VRCSDKBaseVRCPlayerApi.__SetWalkSpeed__SystemSingle__SystemVoid\"\n        \n
+    \        # hitboxManager.MinimumSize = MinimumSize;\n        PUSH, hitboxManager\n
+    \       PUSH, __7_const_intnl_SystemString\n        PUSH, MinimumSize\n        EXTERN,
+    \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n.code_end\n"
+  assemblyError: 
+  sourceCsScript: {fileID: 11500000, guid: 12851bad029e3034cace8ef35750da0c, type: 3}
+  behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
+  compileErrors: []
+  debugInfo:
+    serializedDebugSpans:
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 0
+      line: 0
+      lineChar: 0
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 0
+      line: 0
+      lineChar: 0
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 6
+      line: 0
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 6
+      endSourceChar: 6
+      line: 0
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 6
+      endSourceChar: 6
+      line: 0
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 6
+      endSourceChar: 13
+      line: 0
+      lineChar: 6
+      spanCodeSection: System.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 13
+      endSourceChar: 25
+      line: 0
+      lineChar: 13
+      spanCodeSection: Collections.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 25
+      endSourceChar: 35
+      line: 0
+      lineChar: 25
+      spanCodeSection: "Generic;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 35
+      endSourceChar: 41
+      line: 1
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 41
+      endSourceChar: 53
+      line: 1
+      lineChar: 6
+      spanCodeSection: "UdonSharp;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 53
+      endSourceChar: 59
+      line: 2
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 59
+      endSourceChar: 73
+      line: 2
+      lineChar: 6
+      spanCodeSection: "UnityEngine;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 73
+      endSourceChar: 79
+      line: 3
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 79
+      line: 3
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 83
+      line: 3
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 83
+      endSourceChar: 93
+      line: 3
+      lineChar: 10
+      spanCodeSection: "SDKBase;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 93
+      endSourceChar: 99
+      line: 4
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 99
+      endSourceChar: 99
+      line: 4
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 99
+      endSourceChar: 103
+      line: 4
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 103
+      endSourceChar: 112
+      line: 4
+      lineChar: 10
+      spanCodeSection: "Udon;\r\n\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 112
+      endSourceChar: 140
+      line: 6
+      lineChar: 0
+      spanCodeSection: 'public class SetPlayerClass '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 140
+      endSourceChar: 142
+      line: 6
+      lineChar: 28
+      spanCodeSection: ': '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 142
+      endSourceChar: 142
+      line: 6
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 142
+      endSourceChar: 169
+      line: 6
+      lineChar: 30
+      spanCodeSection: "UdonSharpBehaviour\r\n{\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 169
+      endSourceChar: 176
+      line: 8
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 176
+      endSourceChar: 176
+      line: 8
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 176
+      endSourceChar: 202
+      line: 8
+      lineChar: 11
+      spanCodeSection: "int MaxHealth = 300;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 202
+      endSourceChar: 209
+      line: 9
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 209
+      endSourceChar: 209
+      line: 9
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 209
+      endSourceChar: 235
+      line: 9
+      lineChar: 11
+      spanCodeSection: "float ChestDMG = 25;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 235
+      endSourceChar: 242
+      line: 10
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 242
+      endSourceChar: 242
+      line: 10
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 242
+      endSourceChar: 268
+      line: 10
+      lineChar: 11
+      spanCodeSection: "float HeadDMG = 300;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 268
+      endSourceChar: 275
+      line: 11
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 275
+      endSourceChar: 275
+      line: 11
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 275
+      endSourceChar: 302
+      line: 11
+      lineChar: 11
+      spanCodeSection: "float DOTAmount = 50;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 302
+      endSourceChar: 309
+      line: 12
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 309
+      endSourceChar: 309
+      line: 12
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 309
+      endSourceChar: 336
+      line: 12
+      lineChar: 11
+      spanCodeSection: "float HOTAmount = 40;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 336
+      endSourceChar: 343
+      line: 13
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 343
+      endSourceChar: 343
+      line: 13
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 343
+      endSourceChar: 371
+      line: 13
+      lineChar: 11
+      spanCodeSection: "float HealAmount = 75;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 371
+      endSourceChar: 378
+      line: 14
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 378
+      endSourceChar: 378
+      line: 14
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 378
+      endSourceChar: 404
+      line: 14
+      lineChar: 11
+      spanCodeSection: "float JumpSpeed = 5;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 404
+      endSourceChar: 411
+      line: 15
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 411
+      endSourceChar: 411
+      line: 15
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 411
+      endSourceChar: 436
+      line: 15
+      lineChar: 11
+      spanCodeSection: "float RunSpeed = 5;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 436
+      endSourceChar: 443
+      line: 16
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 443
+      endSourceChar: 443
+      line: 16
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 443
+      endSourceChar: 469
+      line: 16
+      lineChar: 11
+      spanCodeSection: "float WalkSpeed = 3;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 469
+      endSourceChar: 476
+      line: 17
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 476
+      endSourceChar: 476
+      line: 17
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 476
+      endSourceChar: 546
+      line: 17
+      lineChar: 11
+      spanCodeSection: "bool AllowJump = true;\r\n    //public float GravityStrength
+        = 1f;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 546
+      endSourceChar: 553
+      line: 19
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 553
+      endSourceChar: 553
+      line: 19
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 553
+      endSourceChar: 582
+      line: 19
+      lineChar: 11
+      spanCodeSection: "float MinimumSize = 1f;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 582
+      endSourceChar: 589
+      line: 20
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 589
+      endSourceChar: 589
+      line: 20
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 589
+      endSourceChar: 624
+      line: 20
+      lineChar: 11
+      spanCodeSection: "string ClassText = \"Assault\";\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 624
+      endSourceChar: 631
+      line: 21
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 631
+      endSourceChar: 631
+      line: 21
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 631
+      endSourceChar: 665
+      line: 21
+      lineChar: 11
+      spanCodeSection: "HitboxManager hitboxManager;\r\n    "
+    - startInstruction: 0
+      endInstruction: 7
+      startSourceChar: 665
+      endSourceChar: 702
+      line: 22
+      lineChar: 4
+      spanCodeSection: "public override void Interact()\r\n    "
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 702
+      endSourceChar: 713
+      line: 23
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 713
+      endSourceChar: 716
+      line: 24
+      lineChar: 8
+      spanCodeSection: if(
+    - startInstruction: 8
+      endInstruction: 47
+      startSourceChar: 716
+      endSourceChar: 740
+      line: 24
+      lineChar: 11
+      spanCodeSection: "hitboxManager)\r\n        "
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 740
+      endSourceChar: 755
+      line: 25
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 755
+      endSourceChar: 755
+      line: 26
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 755
+      endSourceChar: 755
+      line: 26
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 755
+      endSourceChar: 755
+      line: 26
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 755
+      endSourceChar: 769
+      line: 26
+      lineChar: 12
+      spanCodeSection: hitboxManager.
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 769
+      endSourceChar: 780
+      line: 26
+      lineChar: 26
+      spanCodeSection: 'ChestDMG = '
+    - startInstruction: 48
+      endInstruction: 79
+      startSourceChar: 780
+      endSourceChar: 803
+      line: 26
+      lineChar: 37
+      spanCodeSection: "ChestDMG;\r\n            "
+    - startInstruction: 80
+      endInstruction: 79
+      startSourceChar: 803
+      endSourceChar: 803
+      line: 27
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 80
+      endInstruction: 79
+      startSourceChar: 803
+      endSourceChar: 803
+      line: 27
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 80
+      endInstruction: 79
+      startSourceChar: 803
+      endSourceChar: 803
+      line: 27
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 80
+      endInstruction: 79
+      startSourceChar: 803
+      endSourceChar: 817
+      line: 27
+      lineChar: 12
+      spanCodeSection: hitboxManager.
+    - startInstruction: 80
+      endInstruction: 79
+      startSourceChar: 817
+      endSourceChar: 827
+      line: 27
+      lineChar: 26
+      spanCodeSection: 'HeadDMG = '
+    - startInstruction: 80
+      endInstruction: 111
+      startSourceChar: 827
+      endSourceChar: 849
+      line: 27
+      lineChar: 36
+      spanCodeSection: "HeadDMG;\r\n            "
+    - startInstruction: 112
+      endInstruction: 111
+      startSourceChar: 849
+      endSourceChar: 849
+      line: 28
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 112
+      endInstruction: 111
+      startSourceChar: 849
+      endSourceChar: 849
+      line: 28
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 112
+      endInstruction: 111
+      startSourceChar: 849
+      endSourceChar: 849
+      line: 28
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 112
+      endInstruction: 111
+      startSourceChar: 849
+      endSourceChar: 863
+      line: 28
+      lineChar: 12
+      spanCodeSection: hitboxManager.
+    - startInstruction: 112
+      endInstruction: 111
+      startSourceChar: 863
+      endSourceChar: 876
+      line: 28
+      lineChar: 26
+      spanCodeSection: 'HealAmount = '
+    - startInstruction: 112
+      endInstruction: 143
+      startSourceChar: 876
+      endSourceChar: 901
+      line: 28
+      lineChar: 39
+      spanCodeSection: "HealAmount;\r\n            "
+    - startInstruction: 144
+      endInstruction: 143
+      startSourceChar: 901
+      endSourceChar: 901
+      line: 29
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 144
+      endInstruction: 143
+      startSourceChar: 901
+      endSourceChar: 901
+      line: 29
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 144
+      endInstruction: 143
+      startSourceChar: 901
+      endSourceChar: 901
+      line: 29
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 144
+      endInstruction: 143
+      startSourceChar: 901
+      endSourceChar: 915
+      line: 29
+      lineChar: 12
+      spanCodeSection: hitboxManager.
+    - startInstruction: 144
+      endInstruction: 143
+      startSourceChar: 915
+      endSourceChar: 927
+      line: 29
+      lineChar: 26
+      spanCodeSection: 'MaxHealth = '
+    - startInstruction: 144
+      endInstruction: 175
+      startSourceChar: 927
+      endSourceChar: 951
+      line: 29
+      lineChar: 38
+      spanCodeSection: "MaxHealth;\r\n            "
+    - startInstruction: 176
+      endInstruction: 175
+      startSourceChar: 951
+      endSourceChar: 951
+      line: 30
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 176
+      endInstruction: 175
+      startSourceChar: 951
+      endSourceChar: 951
+      line: 30
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 176
+      endInstruction: 175
+      startSourceChar: 951
+      endSourceChar: 951
+      line: 30
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 176
+      endInstruction: 175
+      startSourceChar: 951
+      endSourceChar: 965
+      line: 30
+      lineChar: 12
+      spanCodeSection: hitboxManager.
+    - startInstruction: 176
+      endInstruction: 175
+      startSourceChar: 965
+      endSourceChar: 977
+      line: 30
+      lineChar: 26
+      spanCodeSection: 'DOTAmount = '
+    - startInstruction: 176
+      endInstruction: 207
+      startSourceChar: 977
+      endSourceChar: 1001
+      line: 30
+      lineChar: 38
+      spanCodeSection: "DOTAmount;\r\n            "
+    - startInstruction: 208
+      endInstruction: 207
+      startSourceChar: 1001
+      endSourceChar: 1001
+      line: 31
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 208
+      endInstruction: 207
+      startSourceChar: 1001
+      endSourceChar: 1001
+      line: 31
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 208
+      endInstruction: 207
+      startSourceChar: 1001
+      endSourceChar: 1001
+      line: 31
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 208
+      endInstruction: 207
+      startSourceChar: 1001
+      endSourceChar: 1015
+      line: 31
+      lineChar: 12
+      spanCodeSection: hitboxManager.
+    - startInstruction: 208
+      endInstruction: 207
+      startSourceChar: 1015
+      endSourceChar: 1027
+      line: 31
+      lineChar: 26
+      spanCodeSection: 'HOTAmount = '
+    - startInstruction: 208
+      endInstruction: 239
+      startSourceChar: 1027
+      endSourceChar: 1051
+      line: 31
+      lineChar: 38
+      spanCodeSection: "HOTAmount;\r\n            "
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1051
+      endSourceChar: 1051
+      line: 32
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1051
+      endSourceChar: 1051
+      line: 32
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1051
+      endSourceChar: 1051
+      line: 32
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1051
+      endSourceChar: 1065
+      line: 32
+      lineChar: 12
+      spanCodeSection: hitboxManager.
+    - startInstruction: 240
+      endInstruction: 239
+      startSourceChar: 1065
+      endSourceChar: 1077
+      line: 32
+      lineChar: 26
+      spanCodeSection: 'ClassText = '
+    - startInstruction: 240
+      endInstruction: 271
+      startSourceChar: 1077
+      endSourceChar: 1101
+      line: 32
+      lineChar: 38
+      spanCodeSection: "ClassText;\r\n            "
+    - startInstruction: 272
+      endInstruction: 271
+      startSourceChar: 1101
+      endSourceChar: 1105
+      line: 33
+      lineChar: 12
+      spanCodeSection: if (
+    - startInstruction: 272
+      endInstruction: 287
+      startSourceChar: 1105
+      endSourceChar: 1129
+      line: 33
+      lineChar: 16
+      spanCodeSection: "AllowJump)\r\n            "
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1129
+      endSourceChar: 1148
+      line: 34
+      lineChar: 12
+      spanCodeSection: "{\r\n                "
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1148
+      endSourceChar: 1148
+      line: 35
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1148
+      endSourceChar: 1148
+      line: 35
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1148
+      endSourceChar: 1148
+      line: 35
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1148
+      endSourceChar: 1148
+      line: 35
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1148
+      endSourceChar: 1159
+      line: 35
+      lineChar: 16
+      spanCodeSection: Networking.
+    - startInstruction: 288
+      endInstruction: 287
+      startSourceChar: 1159
+      endSourceChar: 1171
+      line: 35
+      lineChar: 27
+      spanCodeSection: LocalPlayer.
+    - startInstruction: 288
+      endInstruction: 303
+      startSourceChar: 1171
+      endSourceChar: 1186
+      line: 35
+      lineChar: 39
+      spanCodeSection: SetJumpImpulse(
+    - startInstruction: 304
+      endInstruction: 335
+      startSourceChar: 1186
+      endSourceChar: 1228
+      line: 35
+      lineChar: 54
+      spanCodeSection: "JumpSpeed);\r\n\r\n            }\r\n            "
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1228
+      endSourceChar: 1246
+      line: 38
+      lineChar: 12
+      spanCodeSection: "else\r\n            "
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1246
+      endSourceChar: 1265
+      line: 39
+      lineChar: 12
+      spanCodeSection: "{\r\n                "
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1265
+      endSourceChar: 1265
+      line: 40
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1265
+      endSourceChar: 1265
+      line: 40
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1265
+      endSourceChar: 1265
+      line: 40
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1265
+      endSourceChar: 1265
+      line: 40
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1265
+      endSourceChar: 1276
+      line: 40
+      lineChar: 16
+      spanCodeSection: Networking.
+    - startInstruction: 336
+      endInstruction: 335
+      startSourceChar: 1276
+      endSourceChar: 1288
+      line: 40
+      lineChar: 27
+      spanCodeSection: LocalPlayer.
+    - startInstruction: 336
+      endInstruction: 351
+      startSourceChar: 1288
+      endSourceChar: 1303
+      line: 40
+      lineChar: 39
+      spanCodeSection: SetJumpImpulse(
+    - startInstruction: 352
+      endInstruction: 399
+      startSourceChar: 1303
+      endSourceChar: 1337
+      line: 40
+      lineChar: 54
+      spanCodeSection: "0);\r\n\r\n            }\r\n            "
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1337
+      endSourceChar: 1337
+      line: 43
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1337
+      endSourceChar: 1337
+      line: 43
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1337
+      endSourceChar: 1337
+      line: 43
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1337
+      endSourceChar: 1337
+      line: 43
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1337
+      endSourceChar: 1348
+      line: 43
+      lineChar: 12
+      spanCodeSection: Networking.
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 1348
+      endSourceChar: 1360
+      line: 43
+      lineChar: 23
+      spanCodeSection: LocalPlayer.
+    - startInstruction: 400
+      endInstruction: 415
+      startSourceChar: 1360
+      endSourceChar: 1372
+      line: 43
+      lineChar: 35
+      spanCodeSection: SetRunSpeed(
+    - startInstruction: 416
+      endInstruction: 439
+      startSourceChar: 1372
+      endSourceChar: 1396
+      line: 43
+      lineChar: 47
+      spanCodeSection: "RunSpeed);\r\n            "
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 1396
+      endSourceChar: 1396
+      line: 44
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 1396
+      endSourceChar: 1396
+      line: 44
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 1396
+      endSourceChar: 1396
+      line: 44
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 1396
+      endSourceChar: 1396
+      line: 44
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 1396
+      endSourceChar: 1407
+      line: 44
+      lineChar: 12
+      spanCodeSection: Networking.
+    - startInstruction: 440
+      endInstruction: 439
+      startSourceChar: 1407
+      endSourceChar: 1419
+      line: 44
+      lineChar: 23
+      spanCodeSection: LocalPlayer.
+    - startInstruction: 440
+      endInstruction: 455
+      startSourceChar: 1419
+      endSourceChar: 1432
+      line: 44
+      lineChar: 35
+      spanCodeSection: SetWalkSpeed(
+    - startInstruction: 456
+      endInstruction: 479
+      startSourceChar: 1432
+      endSourceChar: 1532
+      line: 44
+      lineChar: 48
+      spanCodeSection: "WalkSpeed);\r\n            //Networking.LocalPlayer.SetGravityStrength(GravityStrength);\r\n
+        \           "
+    - startInstruction: 480
+      endInstruction: 479
+      startSourceChar: 1532
+      endSourceChar: 1532
+      line: 46
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 480
+      endInstruction: 479
+      startSourceChar: 1532
+      endSourceChar: 1532
+      line: 46
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 480
+      endInstruction: 479
+      startSourceChar: 1532
+      endSourceChar: 1532
+      line: 46
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 480
+      endInstruction: 479
+      startSourceChar: 1532
+      endSourceChar: 1546
+      line: 46
+      lineChar: 12
+      spanCodeSection: hitboxManager.
+    - startInstruction: 480
+      endInstruction: 479
+      startSourceChar: 1546
+      endSourceChar: 1560
+      line: 46
+      lineChar: 26
+      spanCodeSection: 'MinimumSize = '
+    - startInstruction: 480
+      endInstruction: 480
+      startSourceChar: 1560
+      endSourceChar: 1560
+      line: 46
+      lineChar: 40
+      spanCodeSection: 
+  hasInteractEvent: 1
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11500000, guid: 995675647a3eabd409512a4c2e17f522, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: fieldDefinitions
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+        UdonSharp.Editor]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 13
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: MaxHealth
+    - Name: $v
+      Entry: 7
+      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Int32, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemInt32
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: MaxHealth
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: MaxHealth
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: ChestDMG
+    - Name: $v
+      Entry: 7
+      Data: 6|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 7|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 8|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Single, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: ChestDMG
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: ChestDMG
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: HeadDMG
+    - Name: $v
+      Entry: 7
+      Data: 10|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 11|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: HeadDMG
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: HeadDMG
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 12|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: DOTAmount
+    - Name: $v
+      Entry: 7
+      Data: 13|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 14|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: DOTAmount
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: DOTAmount
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: HOTAmount
+    - Name: $v
+      Entry: 7
+      Data: 16|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 17|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: HOTAmount
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: HOTAmount
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 18|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: HealAmount
+    - Name: $v
+      Entry: 7
+      Data: 19|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 20|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: HealAmount
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: HealAmount
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: JumpSpeed
+    - Name: $v
+      Entry: 7
+      Data: 22|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 23|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: JumpSpeed
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: JumpSpeed
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 24|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: RunSpeed
+    - Name: $v
+      Entry: 7
+      Data: 25|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 26|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: RunSpeed
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: RunSpeed
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 27|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: WalkSpeed
+    - Name: $v
+      Entry: 7
+      Data: 28|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 29|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: WalkSpeed
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: WalkSpeed
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 30|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: AllowJump
+    - Name: $v
+      Entry: 7
+      Data: 31|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 32|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 33|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Boolean, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: AllowJump
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: AllowJump
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 34|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: MinimumSize
+    - Name: $v
+      Entry: 7
+      Data: 35|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 36|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 8
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: MinimumSize
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: MinimumSize
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 37|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: ClassText
+    - Name: $v
+      Entry: 7
+      Data: 38|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 39|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 40|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.String, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemString
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: ClassText
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: ClassText
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 41|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: hitboxManager
+    - Name: $v
+      Entry: 7
+      Data: 42|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 43|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 44|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: HitboxManager, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: VRCUdonUdonBehaviour
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: hitboxManager
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: hitboxManager
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 45|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

@@ -1,0 +1,351 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
+  m_Name: HOTInteract
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 9a2d37f994800ac42831c3b30cce39cd,
+    type: 2}
+  udonAssembly: ".data_start\n\n    .export hitboxManager\n\n    __refl_const_intnl_udonTypeID:
+    %SystemInt64, null\n    __refl_const_intnl_udonTypeName: %SystemString, null\n
+    \   hitboxManager: %VRCUdonUdonBehaviour, null\n    __0_const_intnl_SystemString:
+    %SystemString, null\n    __0_const_intnl_SystemUInt32: %SystemUInt32, null\n    __0_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __0_intnl_returnTarget_UInt32: %SystemUInt32, null\n\n.data_end\n\n
+    \       \n         # using UdonSharp;\n        \n         # using UnityEngine;\n
+    \       \n         # using VRC.SDKBase;\n        \n         # using VRC.Udon;\n
+    \       \n         # public class HOTInteract : UdonSharpBehaviour\n.code_start\n
+    \       \n         # public HitboxManager hitboxManager;\n        \n         #
+    public override void Interact()\n    .export _interact\n        \n    _interact:\n
+    \       \n        PUSH, __0_const_intnl_SystemUInt32\n        \n         # {\n
+    \       \n         # if (hitboxManager)\n        PUSH, hitboxManager\n        PUSH,
+    __0_intnl_SystemBoolean\n        EXTERN, \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\n
+    \       PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000048\n        \n
+    \        # {\n        \n         # hitboxManager.OnHOT();\n        PUSH, hitboxManager\n
+    \       PUSH, __0_const_intnl_SystemString\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\n        \n.code_end\n"
+  assemblyError: 
+  sourceCsScript: {fileID: 11500000, guid: 57cef3b22189bb44c8edbed1eda7f1cf, type: 3}
+  behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
+  compileErrors: []
+  debugInfo:
+    serializedDebugSpans:
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 2
+      line: 0
+      lineChar: 0
+      spanCodeSection: "\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 2
+      endSourceChar: 2
+      line: 1
+      lineChar: 0
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 2
+      endSourceChar: 8
+      line: 1
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 8
+      endSourceChar: 20
+      line: 1
+      lineChar: 6
+      spanCodeSection: "UdonSharp;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 20
+      endSourceChar: 26
+      line: 2
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 26
+      endSourceChar: 40
+      line: 2
+      lineChar: 6
+      spanCodeSection: "UnityEngine;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 40
+      endSourceChar: 46
+      line: 3
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 46
+      endSourceChar: 46
+      line: 3
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 46
+      endSourceChar: 50
+      line: 3
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 50
+      endSourceChar: 60
+      line: 3
+      lineChar: 10
+      spanCodeSection: "SDKBase;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 60
+      endSourceChar: 66
+      line: 4
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 66
+      endSourceChar: 66
+      line: 4
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 66
+      endSourceChar: 70
+      line: 4
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 70
+      endSourceChar: 79
+      line: 4
+      lineChar: 10
+      spanCodeSection: "Udon;\r\n\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 104
+      line: 6
+      lineChar: 0
+      spanCodeSection: 'public class HOTInteract '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 104
+      endSourceChar: 106
+      line: 6
+      lineChar: 25
+      spanCodeSection: ': '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 106
+      endSourceChar: 106
+      line: 6
+      lineChar: 27
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 106
+      endSourceChar: 133
+      line: 6
+      lineChar: 27
+      spanCodeSection: "UdonSharpBehaviour\r\n{\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 133
+      endSourceChar: 140
+      line: 8
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 140
+      endSourceChar: 140
+      line: 8
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 140
+      endSourceChar: 174
+      line: 8
+      lineChar: 11
+      spanCodeSection: "HitboxManager hitboxManager;\r\n    "
+    - startInstruction: 0
+      endInstruction: 7
+      startSourceChar: 174
+      endSourceChar: 211
+      line: 9
+      lineChar: 4
+      spanCodeSection: "public override void Interact()\r\n    "
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 211
+      endSourceChar: 222
+      line: 10
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 222
+      endSourceChar: 226
+      line: 11
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 8
+      endInstruction: 47
+      startSourceChar: 226
+      endSourceChar: 250
+      line: 11
+      lineChar: 12
+      spanCodeSection: "hitboxManager)\r\n        "
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 250
+      endSourceChar: 265
+      line: 12
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 265
+      endSourceChar: 265
+      line: 13
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 265
+      endSourceChar: 265
+      line: 13
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 265
+      endSourceChar: 265
+      line: 13
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 265
+      endSourceChar: 279
+      line: 13
+      lineChar: 12
+      spanCodeSection: hitboxManager.
+    - startInstruction: 48
+      endInstruction: 48
+      startSourceChar: 279
+      endSourceChar: 279
+      line: 13
+      lineChar: 26
+      spanCodeSection: 
+  hasInteractEvent: 1
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11500000, guid: 995675647a3eabd409512a4c2e17f522, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: fieldDefinitions
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+        UdonSharp.Editor]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: hitboxManager
+    - Name: $v
+      Entry: 7
+      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: HitboxManager, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: VRCUdonUdonBehaviour
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: hitboxManager
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: hitboxManager
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

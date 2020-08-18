@@ -1,0 +1,535 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
+  m_Name: SetPlayerSpawn
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: b2eedffa1f9c85e4ea6a02918e15a2d8,
+    type: 2}
+  udonAssembly: ".data_start\n\n    .export hitboxManager\n    .export RespawnPoint\n\n
+    \   __refl_const_intnl_udonTypeID: %SystemInt64, null\n    __refl_const_intnl_udonTypeName:
+    %SystemString, null\n    RespawnPoint: %UnityEngineTransform, null\n    hitboxManager:
+    %VRCUdonUdonBehaviour, null\n    __0_const_intnl_SystemString: %SystemString,
+    null\n    __1_const_intnl_SystemString: %SystemString, null\n    __2_const_intnl_SystemString:
+    %SystemString, null\n    __3_const_intnl_SystemString: %SystemString, null\n    __4_const_intnl_SystemString:
+    %SystemString, null\n    __0_const_intnl_SystemUInt32: %SystemUInt32, null\n    __0_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __1_intnl_SystemBoolean: %SystemBoolean, null\n    __2_intnl_SystemBoolean:
+    %SystemBoolean, null\n    __0_intnl_SystemObject: %SystemObject, null\n    __0_intnl_UnityEngineTransform:
+    %UnityEngineTransform, null\n    __0_intnl_returnTarget_UInt32: %SystemUInt32,
+    null\n\n.data_end\n\n        \n         # using UdonSharp;\n        \n         #
+    using UnityEngine;\n        \n         # using VRC.SDKBase;\n        \n         #
+    using VRC.Udon;\n        \n         # public class SetPlayerSpawn : UdonSharpBehaviour\n.code_start\n
+    \       \n         # public HitboxManager hitboxManager;\n        \n         #
+    public Transform RespawnPoint;\n        \n         # public override void Interact()\n
+    \   .export _interact\n        \n    _interact:\n        \n        PUSH, __0_const_intnl_SystemUInt32\n
+    \       \n         # {\n        \n         # if (hitboxManager)\n        PUSH,
+    hitboxManager\n        PUSH, __0_intnl_SystemBoolean\n        EXTERN, \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\n
+    \       PUSH, __0_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x00000134\n        \n
+    \        # {\n        \n         # if (RespawnPoint)\n        PUSH, RespawnPoint\n
+    \       PUSH, __1_intnl_SystemBoolean\n        EXTERN, \"UnityEngineObject.__op_Implicit__UnityEngineObject__SystemBoolean\"\n
+    \       PUSH, __1_intnl_SystemBoolean\n        JUMP_IF_FALSE, 0x000000E4\n        \n
+    \        # {\n        \n         # hitboxManager.SetRespawn(RespawnPoint);\n        PUSH,
+    hitboxManager\n        PUSH, __0_const_intnl_SystemString\n        PUSH, RespawnPoint\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\n
+    \       PUSH, RespawnPoint\n        PUSH, __0_intnl_UnityEngineTransform\n        COPY
+    # Copy-on-write symbol value dirtied\n        PUSH, hitboxManager\n        PUSH,
+    __1_const_intnl_SystemString\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\n
+    \       PUSH, hitboxManager\n        PUSH, __2_const_intnl_SystemString\n        PUSH,
+    __0_intnl_SystemObject\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__GetProgramVariable__SystemString__SystemObject\"\n
+    \       PUSH, __0_intnl_SystemObject\n        PUSH, __2_intnl_SystemBoolean\n
+    \       EXTERN, \"SystemConvert.__ToBoolean__SystemObject__SystemBoolean\"\n        JUMP,
+    0x00000134\n        \n         # else\n        \n         # {\n        \n         #
+    hitboxManager.ResetRespawn();\n        PUSH, hitboxManager\n        PUSH, __3_const_intnl_SystemString\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\n
+    \       PUSH, hitboxManager\n        PUSH, __4_const_intnl_SystemString\n        PUSH,
+    __0_intnl_SystemObject\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__GetProgramVariable__SystemString__SystemObject\"\n
+    \       PUSH, __0_intnl_SystemObject\n        PUSH, __2_intnl_SystemBoolean\n
+    \       EXTERN, \"SystemConvert.__ToBoolean__SystemObject__SystemBoolean\"\n        PUSH,
+    __0_intnl_returnTarget_UInt32 #Function epilogue\n        COPY\n        JUMP_INDIRECT,
+    __0_intnl_returnTarget_UInt32\n        \n.code_end\n"
+  assemblyError: 
+  sourceCsScript: {fileID: 11500000, guid: 4fbd9db972b438540ac084e2c3402edc, type: 3}
+  behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
+  compileErrors: []
+  debugInfo:
+    serializedDebugSpans:
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 2
+      line: 0
+      lineChar: 0
+      spanCodeSection: "\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 2
+      endSourceChar: 2
+      line: 1
+      lineChar: 0
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 2
+      endSourceChar: 8
+      line: 1
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 8
+      endSourceChar: 20
+      line: 1
+      lineChar: 6
+      spanCodeSection: "UdonSharp;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 20
+      endSourceChar: 26
+      line: 2
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 26
+      endSourceChar: 40
+      line: 2
+      lineChar: 6
+      spanCodeSection: "UnityEngine;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 40
+      endSourceChar: 46
+      line: 3
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 46
+      endSourceChar: 46
+      line: 3
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 46
+      endSourceChar: 50
+      line: 3
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 50
+      endSourceChar: 60
+      line: 3
+      lineChar: 10
+      spanCodeSection: "SDKBase;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 60
+      endSourceChar: 66
+      line: 4
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 66
+      endSourceChar: 66
+      line: 4
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 66
+      endSourceChar: 70
+      line: 4
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 70
+      endSourceChar: 79
+      line: 4
+      lineChar: 10
+      spanCodeSection: "Udon;\r\n\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 107
+      line: 6
+      lineChar: 0
+      spanCodeSection: 'public class SetPlayerSpawn '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 107
+      endSourceChar: 109
+      line: 6
+      lineChar: 28
+      spanCodeSection: ': '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 109
+      endSourceChar: 109
+      line: 6
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 109
+      endSourceChar: 136
+      line: 6
+      lineChar: 30
+      spanCodeSection: "UdonSharpBehaviour\r\n{\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 136
+      endSourceChar: 143
+      line: 8
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 143
+      endSourceChar: 143
+      line: 8
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 143
+      endSourceChar: 177
+      line: 8
+      lineChar: 11
+      spanCodeSection: "HitboxManager hitboxManager;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 177
+      endSourceChar: 184
+      line: 9
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 184
+      endSourceChar: 184
+      line: 9
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 184
+      endSourceChar: 213
+      line: 9
+      lineChar: 11
+      spanCodeSection: "Transform RespawnPoint;\r\n    "
+    - startInstruction: 0
+      endInstruction: 7
+      startSourceChar: 213
+      endSourceChar: 250
+      line: 10
+      lineChar: 4
+      spanCodeSection: "public override void Interact()\r\n    "
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 250
+      endSourceChar: 261
+      line: 11
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 261
+      endSourceChar: 265
+      line: 12
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 8
+      endInstruction: 47
+      startSourceChar: 265
+      endSourceChar: 289
+      line: 12
+      lineChar: 12
+      spanCodeSection: "hitboxManager)\r\n        "
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 289
+      endSourceChar: 304
+      line: 13
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 48
+      endInstruction: 47
+      startSourceChar: 304
+      endSourceChar: 308
+      line: 14
+      lineChar: 12
+      spanCodeSection: if (
+    - startInstruction: 48
+      endInstruction: 87
+      startSourceChar: 308
+      endSourceChar: 335
+      line: 14
+      lineChar: 16
+      spanCodeSection: "RespawnPoint)\r\n            "
+    - startInstruction: 88
+      endInstruction: 87
+      startSourceChar: 335
+      endSourceChar: 354
+      line: 15
+      lineChar: 12
+      spanCodeSection: "{\r\n                "
+    - startInstruction: 88
+      endInstruction: 87
+      startSourceChar: 354
+      endSourceChar: 354
+      line: 16
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 88
+      endInstruction: 87
+      startSourceChar: 354
+      endSourceChar: 354
+      line: 16
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 88
+      endInstruction: 87
+      startSourceChar: 354
+      endSourceChar: 354
+      line: 16
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 88
+      endInstruction: 87
+      startSourceChar: 354
+      endSourceChar: 368
+      line: 16
+      lineChar: 16
+      spanCodeSection: hitboxManager.
+    - startInstruction: 88
+      endInstruction: 87
+      startSourceChar: 368
+      endSourceChar: 379
+      line: 16
+      lineChar: 30
+      spanCodeSection: SetRespawn(
+    - startInstruction: 88
+      endInstruction: 227
+      startSourceChar: 379
+      endSourceChar: 424
+      line: 16
+      lineChar: 41
+      spanCodeSection: "RespawnPoint);\r\n\r\n            }\r\n            "
+    - startInstruction: 228
+      endInstruction: 227
+      startSourceChar: 424
+      endSourceChar: 442
+      line: 19
+      lineChar: 12
+      spanCodeSection: "else\r\n            "
+    - startInstruction: 228
+      endInstruction: 227
+      startSourceChar: 442
+      endSourceChar: 461
+      line: 20
+      lineChar: 12
+      spanCodeSection: "{\r\n                "
+    - startInstruction: 228
+      endInstruction: 227
+      startSourceChar: 461
+      endSourceChar: 461
+      line: 21
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 228
+      endInstruction: 227
+      startSourceChar: 461
+      endSourceChar: 461
+      line: 21
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 228
+      endInstruction: 227
+      startSourceChar: 461
+      endSourceChar: 461
+      line: 21
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 228
+      endInstruction: 227
+      startSourceChar: 461
+      endSourceChar: 475
+      line: 21
+      lineChar: 16
+      spanCodeSection: hitboxManager.
+    - startInstruction: 228
+      endInstruction: 228
+      startSourceChar: 475
+      endSourceChar: 475
+      line: 21
+      lineChar: 30
+      spanCodeSection: 
+  hasInteractEvent: 1
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11500000, guid: 995675647a3eabd409512a4c2e17f522, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: fieldDefinitions
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+        UdonSharp.Editor]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: hitboxManager
+    - Name: $v
+      Entry: 7
+      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: HitboxManager, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: VRCUdonUdonBehaviour
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: hitboxManager
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: hitboxManager
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: RespawnPoint
+    - Name: $v
+      Entry: 7
+      Data: 6|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 7|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 8|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.Transform, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineTransform
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: RespawnPoint
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: RespawnPoint
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

@@ -1,0 +1,1 @@
+Required: You must reference HitboxManager for the class cubes, and any custom hitbox setups must reference HitboxManager as well!
