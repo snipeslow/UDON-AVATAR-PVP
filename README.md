@@ -1,8 +1,11 @@
-For the VRChat PVP community. Experimental and for "Advanced Users".
+For the VRChat PVP community. Experimental and for "Advanced Users". [Please see the release page for the latest version](https://github.com/snipeslow/UDON-AVATAR-PVP/releases/), this page is holds versions that may be constantly updated and may break existing projects.
 ## Requirements
 * Clean project, or project without any VRCHAT SDK other than VRChat UDON SDK
 * DO NOT PUT INTO PROJECT WITH SDK2, IT WILL BREAK
 * Understanding of the UDON system for VRChat
+* A release unity package of UDON/SDK3
+* A release unity package of UDON-Sharp
+
 ## Setup
 1. Install VRCHAT UDON SDK https://docs.vrchat.com/docs/choosing-your-sdk
 2. Install UDON-Sharp https://github.com/Merlin-san/UdonSharp/
