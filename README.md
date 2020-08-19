@@ -1,12 +1,17 @@
-For the VRChat PVP community. Experimental.
+For the VRChat PVP community. Experimental and for "Advanced Users".
 ## Requirements
 * Clean project, or project without any VRCHAT SDK other than VRChat UDON SDK
 * DO NOT PUT INTO PROJECT WITH SDK2, IT WILL BREAK
-* Understanding of the UDON system for VRCHat
+* Understanding of the UDON system for VRChat
 ## Setup
 1. Install VRCHAT UDON SDK https://docs.vrchat.com/docs/choosing-your-sdk
 2. Install UDON-Sharp https://github.com/Merlin-san/UdonSharp/
-3. Then install a release https://github.com/snipeslow/UDON-AVATAR-PVP/releases/
+3. Setup layers like the image below
 
+![](https://cdn.discordapp.com/attachments/365302873233293333/717840252554969239/Avatar_PVP_Unity_layers.png)
+
+3. Then install a release https://github.com/snipeslow/UDON-AVATAR-PVP/releases/
+4. If variables are missing, compile all UDON-Sharp scripts
+5. Drag the HitboxManager prefab into scene, and all objects that require a HitboxManager will need that slotted in
 ### TODO
-* I need to write more stuff
+* Fix instructions and easier setup
