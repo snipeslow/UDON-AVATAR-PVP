@@ -1,4 +1,4 @@
-For the VRChat PVP community. Experimental and for "Advanced Users". [Please see the release page for the latest version](https://github.com/snipeslow/UDON-AVATAR-PVP/releases/), this page is holds versions that may be constantly updated and may break existing projects.
+For the VRChat PVP community. Experimental and for **"Advanced Users"**. [Please see the release page for the latest version](https://github.com/snipeslow/UDON-AVATAR-PVP/releases/), this page is holds versions that may be constantly updated and may break existing projects.
 ## Requirements
 * Clean project, or project without any VRCHAT SDK other than VRChat UDON SDK
 * DO NOT PUT INTO PROJECT WITH SDK2, IT WILL BREAK
