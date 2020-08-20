@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: SetPlayerClassUDON
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 89f8f83ee3dacb141a4311a6f5926269,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: ff1b3ef12b0f85741b8f1b726161c526,
     type: 2}
   udonAssembly: ".data_start\n\n    .export MaxHealth\n    .export ChestDMG\n    .export
     HeadDMG\n    .export DOTAmount\n    .export HOTAmount\n    .export HealAmount\n

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: DOTInteract
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 881ed2fdbe87f944c826a17a4b81eace,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: fb63a0ec2ac9f3b468173dc9feaae6cd,
     type: 2}
   udonAssembly: ".data_start\n\n    .export hitboxManager\n\n    __refl_const_intnl_udonTypeID:
     %SystemInt64, null\n    __refl_const_intnl_udonTypeName: %SystemString, null\n

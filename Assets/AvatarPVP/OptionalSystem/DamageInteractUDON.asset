@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: DamageInteractUDON
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: fd828968f2767fe4cad67aaa740bd1f9,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: ab16bc4bc49cb0c4bac053cb0d12eda9,
     type: 2}
   udonAssembly: ".data_start\n\n    .export hitboxManager\n    .export Amount\n\n
     \   __refl_const_intnl_udonTypeID: %SystemInt64, null\n    __refl_const_intnl_udonTypeName:

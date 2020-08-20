@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: HOTInteract
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 9a2d37f994800ac42831c3b30cce39cd,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: cea1afdab68ce15419fed34595dca7fd,
     type: 2}
   udonAssembly: ".data_start\n\n    .export hitboxManager\n\n    __refl_const_intnl_udonTypeID:
     %SystemInt64, null\n    __refl_const_intnl_udonTypeName: %SystemString, null\n

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: ForceVelocityTrigger
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 34fee6a07374fda4a8702a06db08befd,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 523f4c176f685194d8dbed25cfe3f296,
     type: 2}
   udonAssembly: ".data_start\n\n    .export hitboxManager\n    .export ForceVelocity\n\n
     \   __refl_const_intnl_udonTypeID: %SystemInt64, null\n    __refl_const_intnl_udonTypeName:

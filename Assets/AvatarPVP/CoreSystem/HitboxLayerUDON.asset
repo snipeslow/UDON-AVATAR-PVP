@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: HitboxLayerUDON
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: f9be60bc18fa626489897a1f46b980da,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 9f66d03c1dd39f449a25c464cb9555e1,
     type: 2}
   udonAssembly: ".data_start\n\n    .export hitboxManager\n    .export IsHead\n\n
     \   __refl_const_intnl_udonTypeID: %SystemInt64, null\n    __refl_const_intnl_udonTypeName:

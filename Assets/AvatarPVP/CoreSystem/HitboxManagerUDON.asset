@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: HitboxManagerUDON
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: b08e9c83cd965e049b123d81c2deed23,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 2f8b8b97a320ebb47b5e50ad94ae2c22,
     type: 2}
   udonAssembly: ".data_start\n\n    .export MaxHealth\n    .export Health\n    .export
     ChestDMG\n    .export HeadDMG\n    .export DOTAmount\n    .export DOTTime\n    .export
