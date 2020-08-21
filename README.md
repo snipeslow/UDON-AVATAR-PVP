@@ -22,6 +22,7 @@ For the VRChat PVP community. *Experimental* and for **"Advanced Users"**. [Plea
 - [ ] Fix instructions
 - [ ] Make setup easier
 - [ ] Reorganize code better
+- [ ] Figure a way to reimpliment side strafing speed
 
 ## Credits and Thank you!
 * GoFluffYaself for the original SDK2 system that serves as the inspiration
