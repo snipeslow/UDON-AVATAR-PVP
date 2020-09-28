@@ -15,7 +15,7 @@ public class PVPSetupWindow : EditorWindow
 
     void OnGUI()
     {
-        if(GUILayout.Button("Set layers for PVP (Will override layers 31, 30, 29)"))
+        if(GUILayout.Button("Setup layers for PVP (Will override layers 31, 30, 29)"))
         {
             //Based on https://forum.unity.com/threads/create-tags-and-layers-in-the-editor-using-script-both-edit-and-runtime-modes.732119/
             SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
@@ -27,6 +27,32 @@ public class PVPSetupWindow : EditorWindow
             HealLayer.stringValue = "Heal";
             DOTLayer.stringValue = "DOT";
             tagManager.ApplyModifiedProperties();
+        }
+
+        EditorGUILayout.Space();
+        if (!Physics.GetIgnoreLayerCollision(10, 29))
+        {
+            EditorGUILayout.LabelField("Warning! Layer Collision Matrix not setup for HOT layer!");
+        }
+
+        EditorGUILayout.Space();
+        if (!Physics.GetIgnoreLayerCollision(10, 30))
+        {
+            EditorGUILayout.LabelField("Warning! Layer Collision Matrix not setup for Heal layer!");
+
+        }
+        EditorGUILayout.Space();
+        if (!Physics.GetIgnoreLayerCollision(10, 31))
+        {
+            EditorGUILayout.LabelField("Warning! Layer Collision Matrix not setup for DOT layer!");
+
+        }
+
+        if (GUILayout.Button("Setup Layer Collision matrix"))
+        {
+            Physics.IgnoreLayerCollision(10, 29, true);
+            Physics.IgnoreLayerCollision(10, 30, true);
+            Physics.IgnoreLayerCollision(10, 31, true);
         }
     }
 }
