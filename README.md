@@ -14,9 +14,10 @@ For the VRChat PVP community. *Experimental* and for **"Advanced Users"**. [Plea
 
 ![](https://cdn.discordapp.com/attachments/365302873233293333/717840252554969239/Avatar_PVP_Unity_layers.png)
 
-3. Then install a release https://github.com/snipeslow/UDON-AVATAR-PVP/releases/
-4. If variables are missing, compile all UDON-Sharp scripts
-5. Drag the HitboxManager prefab into scene, and all objects that require a HitboxManager will need that slotted in
+4. Setup the layer collision matrix to have Heal, HOT, and DOT not collide with PlayerLocal or Player. (To prevent physics bugs)
+5. Then install a release https://github.com/snipeslow/UDON-AVATAR-PVP/releases/
+6. If variables are missing, compile all UDON-Sharp scripts
+7. Drag the HitboxManager prefab into scene, and all objects that require a HitboxManager will need that slotted in
 
 ## TODO
 - [ ] Fix instructions
